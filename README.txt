@@ -9,8 +9,8 @@ On other operating systems, try the Canopy Express Free version:
 
 https://store.enthought.com/
 
-If you are using Python 3, Python 3's 2to3 tool successfully converts
-all of the existing code, and all 100+ unit tests run successfully.
+This repository is for Python 3, if you are using Python 2 please
+use https://github.com/zunzun/pyeq2 instead.
 
 See the Examples directory to get started.  All of the examples should
 run by typing "python examplename.py" at a command prompt.  If your

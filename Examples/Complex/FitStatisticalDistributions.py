@@ -172,7 +172,7 @@ pyeq3.dataConvertorService().ConvertAndSortColumnarASCII(asciiTextData, simpleOb
 resultList = []
 solver = pyeq3.solverService()
 criteriaForUseInListSorting = 'AIC' # ['AIC', 'AICc_BA', 'nnlf'] from top of SolverService.SolveStatisticalDistribution()
-maxi = 0 # randy
+
 for distribution in inspect.getmembers(scipy.stats): # try to fit every distribution
     if isinstance(distribution[1], scipy.stats.rv_continuous):
         print("Fitting", distribution[0])

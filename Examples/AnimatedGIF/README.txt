@@ -8,7 +8,7 @@ Step 1: Install matplotlib, imagemagick and gifsicle
 
 On Debian or Ubuntu Linux, you can use this command:
 
-sudo apt-get install imagemagick python-matplotlib gifsicle
+sudo apt-get install imagemagick python3-matplotlib gifsicle
 
 
 
@@ -16,7 +16,7 @@ Step 2: Run the AnimatedGIF example
 
 From a command prompt run this command:
 
-python AnimatedGIF.py
+python3 AnimatedGIF.py
 
 The example will display its progress
 as it runs, and will create a file named

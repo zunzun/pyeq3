@@ -6,7 +6,7 @@ see http://commonproblems.readthedocs.io/en/latest/
 
 First run the nodejs-to-pyeq3 interface generator with
 
-python generator.py
+python3 generator.py
 
 and then run the NodeJS example files:
 

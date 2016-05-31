@@ -20,7 +20,7 @@ Step 1: Install matplotlib, imagemagick and gifsicle
 
 On Debian or Ubuntu Linux, you can use this command:
 
-sudo apt-get install imagemagick python-matplotlib gifsicle
+sudo apt-get install imagemagick python3-matplotlib gifsicle
 
 
 
@@ -28,7 +28,7 @@ Step 2: Run the CommonProblems generator
 
 From a command prompt run this command:
 
-python generateOutput.py
+python3 generateOutput.py
 
 The generator will display its progress
 as it runs, and will create both HTML

@@ -24,7 +24,7 @@ Step 3: Start the remote cluster nodes
 
 On Debian, I personally use the command
 
-"python /usr/local/bin/dispynode.py --clean".
+"python3 /usr/local/bin/dispynode.py --clean".
 
 DOCKER-ONLY NOTE: if you use docker containers to
 provision the remote nodes, you will need to make
@@ -41,7 +41,7 @@ Step 4: Test remote cluster fitting of one equation
 
 From a command prompt, run this command:
 
-python Test_Single_Fit.py
+python3 Test_Single_Fit.py
 
 If everything works, you should see the following:
 
@@ -61,7 +61,7 @@ Step 5: Test remote cluster fitting in parallel
 
 From a command prompt, run this command:
 
-python Test_Parallel_Fit.py
+python3 Test_Parallel_Fit.py
 
 If everything works, you should see the following:
 

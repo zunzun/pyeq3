@@ -8,7 +8,7 @@ Step 1: Install flask, scipy and matplotlib
 
 On Debian or Ubuntu Linux, you can use this command:
 
-sudo apt-get install python-flask python-scipy python-matplotlib
+sudo apt-get install python3-flask python3-scipy python3-matplotlib
 
 
 On other operating systems, try the Canopy Express Free version:
@@ -25,7 +25,7 @@ Step 2: Run the FlaskFit example
 
 From a command prompt run this command:
 
-python FlaskFit.py
+python3 FlaskFit.py
 
 The command prompt should then display:
 

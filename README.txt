@@ -3,7 +3,7 @@ see http://commonproblems.readthedocs.io/en/latest/
 
 On Debian or Ubuntu Linux, you can use this command to get both:
 
-sudo apt-get install python-scipy
+sudo apt-get install python3-scipy
 
 On other operating systems, try the Canopy Express Free version:
 
@@ -13,7 +13,7 @@ This repository is for Python 3, if you are using Python 2 please
 use https://github.com/zunzun/pyeq2 instead.
 
 See the Examples directory to get started.  All of the examples should
-run by typing "python examplename.py" at a command prompt.  If your
+run by typing "python3 examplename.py" at a command prompt.  If your
 copy of pyeq3 does not include the Examples directory, you can find
 the examples at https://github.com/zunzun/pyeq3/tree/master/Examples
 

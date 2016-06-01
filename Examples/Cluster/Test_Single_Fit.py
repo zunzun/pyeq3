@@ -20,7 +20,7 @@ def fitEquationUsingDispyCluster(inEquationString, inFittingTargetString, inExte
     # individual cluster nodes must be able to import pyeq3
     import pyeq3
 
-    exec('equation = ' + inEquationString +'("' + inFittingTargetString + '", "' + inExtendedVersionString + '")')
+    equation = eval(inEquationString +'("' + inFittingTargetString + '", "' + inExtendedVersionString + '")')
     pyeq3.dataConvertorService().ConvertAndSortColumnarASCII(inTextData, equation, False)
     equation.Solve()
     fittedTarget = equation.CalculateAllDataFittingTarget(equation.solvedCoefficients)
@@ -56,8 +56,7 @@ if job.exception: # can also use job.status
     print()
     print(str(job.exception))
 else:
-    equationString = 'equation = ' + results[1] + '("' + fittingTargetString + '")'
-    exec(equationString)
+    equation = eval(results[1] + '("' + fittingTargetString + '")')
     equation.solvedCoefficients = results[2]
     print('Success! Results from job:')
     print('The equation ' + results[1])

@@ -27,14 +27,14 @@ className = equationInfoFromNodeJS['pythonClassName']
 extendedVersionString = equationInfoFromNodeJS['extendedVersionString']
 dimensionality = equationInfoFromNodeJS['dimensionality']
 
-eqStringToEvaluate = 'equation = pyeq3.Models_'
+eqStringToEvaluate = 'pyeq3.Models_'
 eqStringToEvaluate += str(dimensionality) + 'D.'
 eqStringToEvaluate += moduleName + '.'
 eqStringToEvaluate += className + '('
 eqStringToEvaluate += '"' + fittingTargetFromNodeJS + '",'
 eqStringToEvaluate += '"' + extendedVersionString + '")'
 
-exec(eqStringToEvaluate)
+equation = eval(eqStringToEvaluate)
 
 pyeq3.dataConvertorService().ConvertAndSortColumnarASCII(textDataFromNodeJS, equation, False)
 

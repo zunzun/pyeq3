@@ -49,7 +49,7 @@ def SetParametersAndFit(equationString, inFittingTargetString, inExtendedVersion
     # individual cluster nodes must be able to import pyeq3
     import pyeq3
 
-    exec('equation = ' + equationString +'("' + inFittingTargetString + '", "' + inExtendedVersionString + '")')
+    equation = eval'equationString +'("' + inFittingTargetString + '", "' + inExtendedVersionString + '")')
     pyeq3.dataConvertorService().ConvertAndSortColumnarASCII(inTextData, equation, False)
  
     try:
@@ -137,7 +137,7 @@ equationSolvedCoefficients = topResult[2]
 equationString = topResult[3]
 extendedVersionString = topResult[4]
 
-exec('equation = ' + equationString +'("' + fittingTargetString + '", "' + extendedVersionString + '")')
+equation = eval('equationString +'("' + fittingTargetString + '", "' + extendedVersionString + '")')
 
 print('Lowest fitting target result was ' + fittingTargetString + " of " + str(fittedTargetValue))
 print('for the equation "' + equationDisplayName + '"')

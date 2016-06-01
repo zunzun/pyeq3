@@ -112,7 +112,7 @@ class SourceCodeReport(wx.Panel):
     def __init__(self, parent, equation, lanuageNameString):
         wx.Panel.__init__(self, parent=parent, id=wx.ID_ANY)
         
-        exec('code = pyeq3.outputSourceCodeService().GetOutputSourceCode' + lanuageNameString + '(equation)')
+        code = eval('pyeq3.outputSourceCodeService().GetOutputSourceCode' + lanuageNameString + '(equation)')
         self.text = wx.TextCtrl(self, -1, code, style=wx.TE_MULTILINE|wx.HSCROLL|wx.VSCROLL|wx.TE_READONLY)
 
         sizer = wx.BoxSizer()

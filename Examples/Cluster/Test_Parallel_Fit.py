@@ -1,7 +1,3 @@
-
-
-
-
 import os, sys, dispy
 
 # ensure pyeq3 can be imported
@@ -20,7 +16,7 @@ def fitEquationUsingDispyCluster(inEquationString, inFittingTargetString, inExte
     # individual cluster nodes must be able to import pyeq3
     import pyeq3
 
-    exec('equation = ' + inEquationString +'("' + inFittingTargetString + '", "' + inExtendedVersionString + '")')
+    equation = eval(inEquationString +'("' + inFittingTargetString + '", "' + inExtendedVersionString + '")')
     pyeq3.dataConvertorService().ConvertAndSortColumnarASCII(inTextData, equation, False)
     equation.Solve()
     fittedTarget = equation.CalculateAllDataFittingTarget(equation.solvedCoefficients)
@@ -60,8 +56,7 @@ for job in jobs:
     if job.exception: # can also use job.status
         print('Remote Exception in job number', job.id, '\n', str(job.exception))
     else:
-        equationString = 'equation = ' + results[1] + '("' + fittingTargetString + '")'
-        exec(equationString)
+        equation = eval(results[1] + '("' + fittingTargetString + '")')
         print('Success from job number', job.id)
 
 print()

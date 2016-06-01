@@ -17,7 +17,7 @@ import pyeq3
 # named equations only
 for modelsTypeName in ['Models_2D', 'Models_3D']:
     modelsFile = open(modelsTypeName + ".js", 'wt')
-    exec('models = pyeq3.' + modelsTypeName)
+    models = eval('pyeq3.' + modelsTypeName)
     for submodule in inspect.getmembers(models):
         if inspect.ismodule(submodule[1]):
 

@@ -6,7 +6,7 @@ Step 1: Install and test dispy (DIStributed PYthon)
 
 Instructions are at http://dispy.sourceforge.net/index.html
 
-I personally used the command "pip install dispy".
+I personally used the command "pip3 install dispy".
 
 
 
@@ -16,7 +16,7 @@ The dispy code uses a python file named dispynode.py
 to run jobs on the remote cluster nodes.  The examples
 will import pyeq3, so that must be available for import
 on the remote nodes.  I personally used the command
-"pip install pyeq3" (after installing scipy).
+"pip3 install pyeq3" (after installing scipy).
 
 
 

@@ -68,7 +68,8 @@ class DiffEvolver(object):
             return self.best_vector
 
         for gen in range(1, newgens+1):
-            randints = numpy.random.random_integers(0, self.npop-1, (self.npop, 2))
+            #randints = numpy.random.random_integers(0, self.npop-1, (self.npop, 2))
+            randints = numpy.random.randint(0, self.npop-1, (self.npop, 2))
             for candidate in range(self.npop):
                 i1, i2 = randints[candidate]
                 

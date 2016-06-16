@@ -287,7 +287,7 @@ class Report_AbsoluteErrorHistogram(PanelContainingOneGraphReport):
     def draw(self, equation):
         if not self.parent.abs_error:
             self.parent.abs_error = equation.modelAbsoluteError
-        bincount = len(self.parent.abs_error)/2
+        bincount = len(self.parent.abs_error)//2 # integer division
         if bincount < 5:
             bincount = 5
         if bincount > 25:
@@ -326,7 +326,7 @@ class Report_PercentErrorHistogram(PanelContainingOneGraphReport):
     def draw(self, equation):
         if not self.parent.per_error:
             self.parent.per_error = equation.modelPercentError
-        bincount = len(self.parent.per_error)/2
+        bincount = len(self.parent.per_error)//2 # integer division
         if bincount < 5:
             bincount = 5
         if bincount > 25:
@@ -463,7 +463,7 @@ class Report_ModelScatterConfidenceGraph(PanelContainingOneGraphReport):
         t_value = scipy.stats.t.ppf(0.975, equation.df_e) # (1.0 - (a/2)) is used for two-sided t-test critical value, here a = 0.05
     
         confs = t_value * numpy.sqrt((equation.sumOfSquaredErrors/equation.df_e)*(1.0/n + (numpy.power((xModel-mean_x),2.0)/
-                                                                                                 ((numpy.sum(numpy.power(self.parent.x_data,2)))-n*(numpy.power(mean_x,2.0))))))
+                                                                                                 ((numpy.sum(numpy.power(self.parent.x_data,2.0)))-n*(numpy.power(mean_x,2.0))))))
     
         # get lower and upper confidence limits based on predicted y and confidence intervals
         upper = yModel + abs(confs)

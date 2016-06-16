@@ -1,8 +1,3 @@
-
-NOTE: As of June 2016, wxPython only works with Python 2.
-When the wxpython conversion to Python 3 is completed,
-this example will be updated.
-
 Welcome to wxPythonFit, an example of creating a
 cross-platform curve and surface fitting application 
 using wxPython and the pyeq3 fitting library.

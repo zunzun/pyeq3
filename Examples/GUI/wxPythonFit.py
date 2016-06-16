@@ -1,8 +1,5 @@
 import os, sys, pickle
 
-if sys.version_info[0] > 2:
-    raise Exception('wxpython not yet available for Python 3.x')
-
 import wx # ensure this import works before starting the application
 import matplotlib # ensure this import works before starting the application
 

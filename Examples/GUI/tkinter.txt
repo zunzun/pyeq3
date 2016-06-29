@@ -1,0 +1,2 @@
+tkinter GUI example has been moved to
+ https://github.com/zunzun/tkInterFit

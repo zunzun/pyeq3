@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -492,7 +488,7 @@ class IModel(object):
             # see http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2635088
             if self.fittingTarget == "LNQREL":
                 
-                Q = self.modelPredictions / self.dataCache.allDataCacheDictionary['DependentData']
+                Q = numpy.abs(self.modelPredictions / self.dataCache.allDataCacheDictionary['DependentData'])
                 sumsqlogQ = numpy.sum(numpy.square(numpy.log(Q)))
                 val = sumsqlogQ
                 if numpy.isfinite(val):

@@ -88,17 +88,13 @@ class UserDefinedFunction(pyeq3.Model_3D_BaseClass.Model_3D_BaseClass):
 
     def ParseAndCompileUserFunctionString(self, inString):
        
-        # shift user functions into numpy namespace at run time, do not import time
+        # shift user functions into numpy namespace at run time, not import time
         numpySafeTokenList = []
         for key in list(self.functionDictionary.keys()):
             numpySafeTokenList += self.functionDictionary[key]
         for key in list(self.constantsDictionary.keys()):
             numpySafeTokenList += self.constantsDictionary[key]
            
-        # to shift user functions such as "power" into the numpy namespace "numpy.power" for evaluation
-        for token in numpySafeTokenList:
-            exec(token + ' = numpy.' + token)
-       
         # no blank lines of text, StringIO() allows using file methods on text
         stringToConvert = ''
         rawData = io.StringIO(inString).readlines()
@@ -149,12 +145,10 @@ class UserDefinedFunction(pyeq3.Model_3D_BaseClass.Model_3D_BaseClass):
         if len(self._coefficientDesignators) == 0:
             raise Exception('I could not find any equation parameter or coefficient names, please check the function text')
 
-        # now compile code object using safe tokens
-        self.safe_dict = dict([ (k, locals().get(k, None)) for k in numpySafeTokenList ])
-           
-
         # now compile code object using safe tokens with integer conversion
-        self.safe_dict = dict([ (k, locals().get(k, None)) for k in numpySafeTokenList ])
+        self.safe_dict = locals()
+        for f in numpySafeTokenList:
+            self.safe_dict[f] = eval('numpy.' + f)
            
         # convert integer use such as (3/2) into floats such as (3.0/2.0)
         st = parser.expr(stringToConvert)

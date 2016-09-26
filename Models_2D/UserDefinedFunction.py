@@ -88,11 +88,7 @@ class UserDefinedFunction(pyeq3.Model_2D_BaseClass.Model_2D_BaseClass):
             numpySafeTokenList += self.functionDictionary[key]
         for key in list(self.constantsDictionary.keys()):
             numpySafeTokenList += self.constantsDictionary[key]
-           
-        # to shift user functions such as "power" into the numpy namespace "numpy.power" for evaluation
-        for token in numpySafeTokenList:
-            exec(token + ' = numpy.' + token)
-       
+
         # no blank lines of text, StringIO() allows using file methods on text
         stringToConvert = ''
         rawData = io.StringIO(inString).readlines()
@@ -142,7 +138,9 @@ class UserDefinedFunction(pyeq3.Model_2D_BaseClass.Model_2D_BaseClass):
             raise Exception('I could not find any equation parameter or coefficient names, please check the function text')
 
         # now compile code object using safe tokens with integer conversion
-        self.safe_dict = dict([ (k, locals().get(k, None)) for k in numpySafeTokenList ])
+        self.safe_dict = locals()
+        for f in numpySafeTokenList:
+            self.safe_dict[f] = eval('numpy.' + f)
            
         # convert integer use such as (3/2) into floats such as (3.0/2.0)
         st = parser.expr(stringToConvert)
@@ -174,7 +172,7 @@ class UserDefinedFunction(pyeq3.Model_2D_BaseClass.Model_2D_BaseClass):
         # eval uses previously compiled code for improved performance
         # based on http://lybniz2.sourceforge.net/safeeval._HTML
         try:
-            temp = eval(self.userFunctionCodeObject, {"__builtins__":None, 'numpy':numpy}, self.safe_dict)
+            temp = eval(self.userFunctionCodeObject, globals(), self.safe_dict)
             return self.extendedVersionHandler.GetAdditionalModelPredictions(temp, inCoeffs, inDataCacheDictionary, self)
         except:
             return numpy.ones(len(inDataCacheDictionary['X'])) * 1.0E300

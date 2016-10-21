@@ -12,7 +12,6 @@
 #
 #    License: BSD-style (see LICENSE.txt in main source directory)
 
-import pyeq3
 from . import IExtendedVersionHandler
 
 

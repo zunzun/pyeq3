@@ -17,7 +17,7 @@ import pyeq3
 import numpy # implicitly required by compiling the userFunctionCodeObject in the method EvaluateCachedData() below
 numpy.seterr(all= 'ignore')
 
-import io, parser, types
+import io, parser
 
 import pyeq3.Model_2D_BaseClass
 

@@ -12,6 +12,7 @@
 #
 #    License: BSD-style (see LICENSE.txt in main source directory)
 
+from . import Astrophysics
 from . import BioScience
 from . import Engineering
 from . import Exponential

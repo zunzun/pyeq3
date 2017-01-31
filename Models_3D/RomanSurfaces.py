@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -177,7 +173,7 @@ class RomanSurfaceMinus_ScaledAndOffsetXY(pyeq3.Model_3D_BaseClass.Model_3D_Base
         try:
             temp_x_sq = (a * x_in + b) * (a * x_in + b)
             temp_y_sq = (c * y_in + d) * (c * y_in + d)
-            temp = (k * (temp_y_sq - temp_x_sq) - (temp_x_sq - temp_y_sq) * numpy.power(k * k - temp_x_sq - temp_y_sq)) / (2.0 * (temp_x_sq + temp_y_sq))
+            temp = (k * (temp_y_sq - temp_x_sq) - (temp_x_sq - temp_y_sq) * numpy.sqrt(k * k - temp_x_sq - temp_y_sq)) / (2.0 * (temp_x_sq + temp_y_sq))
             return self.extendedVersionHandler.GetAdditionalModelPredictions(temp, inCoeffs, inDataCacheDictionary, self)
         except:
             return numpy.ones(len(inDataCacheDictionary['DependentData'])) * 1.0E300

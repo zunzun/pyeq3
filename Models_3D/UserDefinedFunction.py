@@ -78,7 +78,7 @@ class UserDefinedFunction(pyeq3.Model_3D_BaseClass.Model_3D_BaseClass):
                 if tup[0] == 1:
                     inList.append(tup[1])
             if tupleLength == 2: # so a caret character can be trapped later
-                if tup[0] == 33:
+                if tup[0] == 32:
                     if tup[1] == '^':
                         inList.append('^')
             for i in tup:

@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -661,6 +657,3 @@ class StrohmanYoerger(pyeq3.Model_3D_BaseClass.Model_3D_BaseClass):
     def SpecificCodeCPP(self):
         s = "\ttemp = exp(C1*exp(-C2*y_in)*log(x_in) - C3*exp(-C4*y_in));\n"
         return s
-
-
-

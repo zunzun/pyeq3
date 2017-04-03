@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -1229,6 +1225,3 @@ class PaschensBreakdownVoltageLaw(pyeq3.Model_3D_BaseClass.Model_3D_BaseClass):
     def SpecificCodeCPP(self):
         s = "\ttemp = (a * x_in * y_in) / (log(x_in * y_in) + b);\n"
         return s
-
-
-

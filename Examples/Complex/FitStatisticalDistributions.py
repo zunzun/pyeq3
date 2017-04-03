@@ -1,4 +1,3 @@
-
 import os, sys, inspect, scipy, numpy
 
 # ensure pyeq3 can be imported

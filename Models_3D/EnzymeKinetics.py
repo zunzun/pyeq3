@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -867,6 +863,3 @@ class UncompetitiveInhibitionB(pyeq3.Model_3D_BaseClass.Model_3D_BaseClass):
     def SpecificCodeCPP(self):
         s = "\ttemp = a * y_in / (b + y_in * (1.0 + x_in / c));\n"
         return s
-
-
-

@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -1129,6 +1125,3 @@ class NIST_Thurber(pyeq3.Model_2D_BaseClass.Model_2D_BaseClass):
     def SpecificCodeCPP(self):
         s = "\ttemp = (a + b * x_in + c * pow(x_in, 2.0) + d * pow(x_in, 3.0)) / (1.0 + f * x_in + g * pow(x_in, 2.0) + h * pow(x_in, 3.0));\n"
         return s
-
-
-

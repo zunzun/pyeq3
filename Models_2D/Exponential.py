@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -1141,6 +1137,3 @@ class JonathanLitzCustomExponential(pyeq3.Model_2D_BaseClass.Model_2D_BaseClass)
     def SpecificCodeCPP(self):
         s = "\ttemp = a + b * x_in + c * exp(-d * x_in) - c * x_in * exp(-d * x_in);\n"
         return s
-
-
-

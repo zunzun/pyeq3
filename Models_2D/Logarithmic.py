@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -1037,6 +1033,3 @@ class QuinticLogarithmicTransform(pyeq3.Model_2D_BaseClass.Model_2D_BaseClass):
     def SpecificCodeCPP(self):
         s = "\ttemp = a + b*log(h * x_in + i) + c*pow(log(h * x_in + i), 2.0) + d*pow(log(h * x_in + i), 3.0) + f*pow(log(h * x_in + i), 4.0) + g*pow(log(h * x_in + i), 5.0);\n"
         return s
-
-
-

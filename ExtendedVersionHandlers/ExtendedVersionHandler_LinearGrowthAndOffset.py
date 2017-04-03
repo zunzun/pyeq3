@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -86,6 +82,3 @@ class ExtendedVersionHandler_LinearGrowthAndOffset(IExtendedVersionHandler.IExte
                 return self.ConvertInfAndNanToLargeNumber(inBaseModelCalculation * inDataCacheDictionary['XY'] + inCoeffs[len(inCoeffs)-1])
             else:
                 return self.ConvertInfAndNanToLargeNumber(inBaseModelCalculation * (inCoeffs[len(inCoeffs)-2] * inDataCacheDictionary['XY']) + inCoeffs[len(inCoeffs)-1])
-    
-    
-

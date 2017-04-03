@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -3096,6 +3092,3 @@ class Sellmod9(pyeq3.Model_2D_BaseClass.Model_2D_BaseClass):
     def SpecificCodeCPP(self):
         s = "\ttemp = A + B/(x_in*x_in) + C/pow(x_in, 4.0) + D/pow(x_in, 6.0) + E*x_in*x_in/(x_in*x_in-F*F);\n"
         return s
-
-
-

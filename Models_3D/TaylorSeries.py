@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -1014,6 +1010,3 @@ class TaylorP(pyeq3.Model_3D_BaseClass.Model_3D_BaseClass):
     def SpecificCodeCPP(self):
         s = "\ttemp = a + b/log(x_in) + c/log(y_in) + d/pow(log(x_in), 2.0) + f/pow(log(y_in), 2.0) + g/(log(x_in)*log(y_in));\n"
         return s
-
-
-

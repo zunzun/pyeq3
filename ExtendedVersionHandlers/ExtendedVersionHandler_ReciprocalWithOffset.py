@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -52,4 +48,3 @@ class ExtendedVersionHandler_ReciprocalWithOffset(IExtendedVersionHandler.IExten
 
     def GetAdditionalModelPredictions(self, inBaseModelCalculation, inCoeffs, inDataCacheDictionary, inModel):
         return self.ConvertInfAndNanToLargeNumber(1.0 / inBaseModelCalculation + inCoeffs[len(inCoeffs)-1])
-

@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -1558,6 +1554,3 @@ class RationalZ(pyeq3.Model_3D_BaseClass.Model_3D_BaseClass):
     def SpecificCodeCPP(self):
         s = "\ttemp  = (a + b*exp(x_in) + c*exp(y_in) + d*exp(x_in)*exp(y_in)) / (1.0 + f*exp(x_in) + g*exp(y_in) + h*exp(x_in)*exp(y_in));\n"
         return s
-
-
-

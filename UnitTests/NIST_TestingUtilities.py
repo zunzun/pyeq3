@@ -1,7 +1,3 @@
-
-
-
-
 import os, sys, math
 
 # ensure pyeq3 can be imported

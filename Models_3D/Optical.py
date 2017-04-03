@@ -1,8 +1,3 @@
-
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -630,6 +625,3 @@ class SagForAsphere0_Borisovsky(pyeq3.Model_3D_BaseClass.Model_3D_BaseClass):
         s += '\tdouble s_over_r = pow(s_sq, 0.5) / r;\n'
         s += '\ttemp = (s_sq / r) / (1.0 + pow(1.0 - (k + 1.0) * s_over_r * s_over_r, 0.5)) + offset;\n'
         return s
-
-
-

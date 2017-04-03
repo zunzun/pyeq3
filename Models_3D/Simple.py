@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -2308,6 +2304,3 @@ class SimpleEquation_44(pyeq3.Model_3D_BaseClass.Model_3D_BaseClass):
     def SpecificCodeCPP(self):
         s = "\ttemp = a*pow(y_in,b)*log(x_in+c);\n"
         return s
-
-
-

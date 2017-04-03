@@ -1,8 +1,3 @@
-
-
-
-
-
 import os, sys, inspect, copy, multiprocessing, queue
 
 # ensure pyeq3 can be imported

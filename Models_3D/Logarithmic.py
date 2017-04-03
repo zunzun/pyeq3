@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -727,6 +723,3 @@ class SimplifiedQuadraticLogarithmicTransform(pyeq3.Model_3D_BaseClass.Model_3D_
         s += "\ttemp += d * pow(log(g * x_in + h), 2.0);\n"
         s += "\ttemp += f * pow(log(i * y_in + j), 2.0);\n"
         return s
-
-
-

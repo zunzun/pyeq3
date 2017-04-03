@@ -403,6 +403,3 @@ class RomanSurfacePlus_ScaledAndOffsetXY(pyeq3.Model_3D_BaseClass.Model_3D_BaseC
         s += '\tdouble temp_y_sq = (c * y_in + d) * (c * y_in + d);\n'
         s += "\ttemp = (k * (temp_y_sq - temp_x_sq) + (temp_x_sq - temp_y_sq) * pow(k * k - temp_x_sq - temp_y_sq, 0.5)) / (2.0 * (temp_x_sq + temp_y_sq));\n"
         return s
-
-
-

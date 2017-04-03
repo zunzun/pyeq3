@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -1919,6 +1915,3 @@ class WeibullPDF(pyeq3.Model_2D_BaseClass.Model_2D_BaseClass):
     def SpecificCodeCPP(self):
         s = "\ttemp = (a/b) * pow(x_in/b, a-1.0) * exp(-1.0 * pow(x_in/b, a));\n"
         return s
-
-
-

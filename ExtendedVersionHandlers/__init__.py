@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -32,4 +28,3 @@ for i in dir():
     splitted = i.split('_')
     if splitted[0] == 'ExtendedVersionHandler':
         extendedVersionHandlerNameList.append(splitted[1])
-

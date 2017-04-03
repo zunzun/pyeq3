@@ -68,33 +68,3 @@ class King_14(pyeq3.Model_2D_BaseClass.Model_2D_BaseClass):
     def SpecificCodeCPP(self):
         s = "\ttemp = k * pow(1.0/pow(1.0 + pow(x_in/r_c, 2.0), 0.5) - 1.0/pow(1.0 + pow(r_t/r_c, 2.0), 0.5), 2.0);\n"
         return s
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

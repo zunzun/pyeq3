@@ -1,7 +1,3 @@
-
-
-
-
 import os, sys, unittest
 
 # the pyeq3 directory is located up one level from here

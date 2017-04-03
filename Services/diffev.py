@@ -1,6 +1,3 @@
-
-
-
 import numpy, numpy.random
 
 '''

@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -1396,6 +1392,3 @@ class TangentX_Times_CoshY(pyeq3.Model_3D_BaseClass.Model_3D_BaseClass):
     def SpecificCodeCPP(self):
         s = "\ttemp = amplitude * tan(3.14159265358979323846 * (x_in - center_x) / width_x) * cosh(3.14159265358979323846 * (y_in - center_y) / width_y);\n"
         return s
-
-
-

@@ -1,8 +1,3 @@
-
-
-
-
-
 import os, sys, inspect, copy
 
 # ensure pyeq3 can be imported
@@ -347,4 +342,3 @@ for numeratorCoeffCount in range(1, maxCoeffs):
                             print('with offset')
                         else:
                             print()
-

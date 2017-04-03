@@ -1,7 +1,3 @@
-
-
-
-
 import os, sys, inspect
 
 # ensure pyeq3 can be imported

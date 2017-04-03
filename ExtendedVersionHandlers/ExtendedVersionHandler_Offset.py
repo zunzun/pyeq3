@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -57,4 +53,3 @@ class ExtendedVersionHandler_Offset(IExtendedVersionHandler.IExtendedVersionHand
     # overridden from abstract parent class
     def CanLinearSolverBeUsedForSSQABS(self, inModelFlag):
         return False
-

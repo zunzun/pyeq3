@@ -1,7 +1,3 @@
-
-
-
-
 #    pyeq3 is a collection of equations expressed as Python classes
 #
 #    Copyright (C) 2013 James R. Phillips
@@ -571,6 +567,3 @@ class LorentzianB(pyeq3.Model_3D_BaseClass.Model_3D_BaseClass):
     def SpecificCodeCPP(self):
         s = "\ttemp = a / (1.0 + pow((x_in-b)/c, 2.0)) + d * (1.0 + pow((y_in-f)/g, 2.0));\n"
         return s
-
-
-

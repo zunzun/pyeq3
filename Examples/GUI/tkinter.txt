@@ -1,6 +1,0 @@
-The tkinter GUI example has been moved to
-https://github.com/zunzun/tkInterFit
-
-The tkinter statistical distributions fitter is at
-https://github.com/zunzun/tkInterStatsDistroFit
-

@@ -1,2 +1,0 @@
-pyGtk GUI example is located at
- https://github.com/zunzun/pyGtkFit
